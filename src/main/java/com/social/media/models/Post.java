@@ -1,8 +1,10 @@
 package com.social.media.models;
 
 import jakarta.persistence.*;
+import lombok.Setter;
 
 @Entity
+@Setter
 public class Post {
 
     @Id
