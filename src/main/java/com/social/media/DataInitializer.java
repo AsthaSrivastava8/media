@@ -29,7 +29,7 @@ public class DataInitializer {
     }
 
     @Bean
-    public CommandLineRunner inilializeData() {
+    public CommandLineRunner initializeData() {
         return args -> {
 
             SocialUser user1 = new SocialUser();

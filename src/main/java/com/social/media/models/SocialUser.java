@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @AllArgsConstructor
@@ -33,4 +30,9 @@ public class SocialUser {
             inverseJoinColumns = @JoinColumn(name = "groupId")
     )
     private Set<SocialGroup> socialGroups = new HashSet<>();
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }
