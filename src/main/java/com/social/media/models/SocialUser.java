@@ -18,7 +18,6 @@ public class SocialUser {
 
     @OneToOne(mappedBy = "user",
             cascade = {CascadeType.REMOVE, CascadeType.PERSIST, CascadeType.MERGE})
-    //@JoinColumn(name = "social_profile_id")
     private SocialProfile socialProfile;
 
     @OneToMany(mappedBy = "socialUser", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
